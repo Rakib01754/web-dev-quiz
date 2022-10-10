@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Topic = ({ topic }) => {
     const { id, logo, name, total } = topic
@@ -14,7 +15,7 @@ const Topic = ({ topic }) => {
                     <p className='text-xl text-left'>{`All the ${name} Related Quiz Here`}</p>
                     <div className="card-actions justify-start flex items-center">
                         <div className="badge badge-outline">Total Quiz: {total}</div>
-                        <button className="btn btn-primary">Start</button>
+                        <NavLink to={`/quiz/${id}`}><button className="btn btn-outline btn-accent">Start Quiz</button></NavLink>
                     </div>
                 </div>
             </div>
