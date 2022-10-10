@@ -8,7 +8,6 @@ const Quizes = () => {
     const quizes = useLoaderData();
     const quizesData = quizes.data;
     const { name, questions } = quizesData;
-    console.log(quizesData)
 
     return (
 
