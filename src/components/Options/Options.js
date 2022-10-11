@@ -5,7 +5,7 @@ const Options = ({ option, correctAnswer }) => {
 
     return (
         <div className='flex px-5'>
-            <button className='text-xl border-black border-2  mb-2 p-2 bg-gray-200 text-black hover:bg-yellow-500 hover:text-white' onClick={() => {
+            <button className='text-xl border-black border-2  mb-2 p-2 bg-gray-100 text-black hover:bg-yellow-500 hover:text-white' onClick={() => {
                 if (option === correctAnswer) {
 
                     Swal.fire('Yayy!!! Answer is Correct.')
