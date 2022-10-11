@@ -1,7 +1,7 @@
 import React from 'react';
 import Swal from 'sweetalert2'
 
-const Options = ({ option, correctAnswer, setWrong, setRight, wrong, right }) => {
+const Options = ({ option, correctAnswer, setWrong, setRight, wrong, right, number }) => {
 
     return (
         <div className='flex px-5'>
@@ -28,7 +28,7 @@ const Options = ({ option, correctAnswer, setWrong, setRight, wrong, right }) =>
                     setWrong(wrong + 1)
                     localStorage.setItem('wrong-ans', wrong + 1)
                 }
-            }}>{option}</button>
+            }}>({number}). {option}</button>
         </div>
     );
 };

@@ -42,8 +42,9 @@ const Quizes = () => {
             </div>
             <div className='grid md:grid-cols-2'>
                 {
-                    questions.map(quiz => <Quiz
+                    questions.map((quiz, idx) => <Quiz
                         key={quiz.id}
+                        number={idx + 1}
                         quiz={quiz}
                         right={right}
                         wrong={wrong}

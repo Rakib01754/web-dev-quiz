@@ -7,14 +7,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Quiz = ({ quiz, setWrong, setRight, wrong, right }) => {
+const Quiz = ({ quiz, setWrong, setRight, wrong, right, number }) => {
     const { correctAnswer, question, options } = quiz
     const notify = () => toast(`Answer: ${correctAnswer}`);
     return (
         <div className='border-2 w-[90%] mx-auto text-left mt-5 p-5 shadow-lg'>
             <div>
                 <div className='flex justify-between'>
-                    <p className='font-bold text-xl mb-3'>{question}
+                    <p className='font-bold text-xl mb-3'>({number}). {question.replace('<p>', '').replace('</p>', '')}
                     </p>
                     <button title='click for correct answer' onClick={notify}>
                         <FontAwesomeIcon icon={faEye} className='text-xl' />
@@ -28,6 +28,7 @@ const Quiz = ({ quiz, setWrong, setRight, wrong, right }) => {
                     options.map((option, idx) => <Options key={idx} option={option} correctAnswer={correctAnswer}
                         right={right}
                         wrong={wrong}
+                        number={idx + 1}
                         setRight={setRight}
                         setWrong={setWrong}
                     ></Options>)
