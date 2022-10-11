@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Category from '../Category/Category';
+import Lottie from "lottie-react";
+import img from '../assets/44177-quiz.json'
 
 const Home = () => {
     const topics = useLoaderData();
@@ -10,7 +12,8 @@ const Home = () => {
             <div className='w-[80%] mx-auto mt-8'>
                 <div className='flex flex-col md:flex-row items-center'>
                     <div>
-                        <img src="https://cdn.pixabay.com/photo/2018/09/18/17/27/questions-3686724_960_720.png" alt="iq" className='w-80' />
+                        <Lottie animationData={img} loop={true} className='w-96'></Lottie>
+                        {/* <img src="https://cdn.pixabay.com/photo/2018/09/18/17/27/questions-3686724_960_720.png" alt="iq" className='w-80' /> */}
                     </div>
                     <div>
                         <p className='font-bold text-4xl ml-3'>

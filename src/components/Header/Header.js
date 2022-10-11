@@ -10,6 +10,7 @@ const Header = () => {
                     <div className="">
                         <NavLink to='/home' className="btn btn-ghost normal-case text-2xl">
                             <img src="https://www.pngmart.com/files/19/Vector-Quiz-Transparent-PNG.png" alt="quiz" className='w-20' />
+
                             <span>Web Dev-Quiz</span>
                         </NavLink>
                     </div>
