@@ -11,11 +11,13 @@ const Quizes = () => {
 
     return (
 
-        <div className='mt-8'>
+        <div className='my-8'>
             <h1 className='text-4xl font-bold text-center underline'>Quizes Of {name}</h1>
-            {
-                questions.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
-            }
+            <div className='grid md:grid-cols-2'>
+                {
+                    questions.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
+                }
+            </div>
         </div>
     );
 };

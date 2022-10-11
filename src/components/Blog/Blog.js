@@ -35,7 +35,7 @@ const Blog = () => {
                     <h1 className='font-bold text-2xl my-2 border-2 border-yellow-500'>
                         3. What is useRef Hook,write details about it?
                     </h1>
-                    <p>
+                    <div>
                         <span className='font-bold text-xl underline'>Answer:</span> <br />
 
                         <p>
@@ -49,7 +49,7 @@ const Blog = () => {
                         <p>
                             The useRef returns a mutable ref object. This object has a property called .current. The value is persisted in the refContainer.current property. These values are accessed from the current property of the returned object. The .current property could be initialised to the passed argument initialValue e.g. useRef(initialValue). The object can persist a value for a full lifetime of the component.
                         </p>
-                    </p>
+                    </div>
                 </div>
 
             </article>
