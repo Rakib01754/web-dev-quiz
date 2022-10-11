@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Quiz = ({ quiz }) => {
+const Quiz = ({ quiz, setWrong, setRight, wrong, right }) => {
     const { correctAnswer, question, options } = quiz
     const notify = () => toast(`Answer: ${correctAnswer}`);
     return (
@@ -25,7 +25,12 @@ const Quiz = ({ quiz }) => {
             </div>
             <div className='grid md:grid-cols-2'>
                 {
-                    options.map((option, idx) => <Options key={idx} option={option} correctAnswer={correctAnswer}></Options>)
+                    options.map((option, idx) => <Options key={idx} option={option} correctAnswer={correctAnswer}
+                        right={right}
+                        wrong={wrong}
+                        setRight={setRight}
+                        setWrong={setWrong}
+                    ></Options>)
                 }
             </div>
         </div>
