@@ -15,9 +15,15 @@ const Header = () => {
                         </NavLink>
                     </div>
                     <ul className=" p-3 font-bold gap-4 flex flex-col md:flex-row">
-                        <li><NavLink to='/home' className='hover:bg-yellow-500 hover:text-white rounded-lg p-3'>Home</NavLink></li>
-                        <li ><NavLink to='/statistics' className='hover:bg-yellow-500 hover:text-white rounded-lg p-3'>Statistics</NavLink></li>
-                        <li><NavLink to='/blog' className='hover:bg-yellow-500 hover:text-white rounded-lg p-3'>Blog</NavLink></li>
+                        <li><NavLink to='/home' className={({ isActive }) =>
+                            isActive ? 'bg-yellow-500 text-white rounded-lg p-3' : 'rounded-lg p-3'
+                        }>Home</NavLink></li>
+                        <li ><NavLink to='/statistics' className={({ isActive }) =>
+                            isActive ? 'bg-yellow-500 text-white rounded-lg p-3' : 'rounded-lg p-3'
+                        }>Statistics</NavLink></li>
+                        <li><NavLink to='/blog' className={({ isActive }) =>
+                            isActive ? 'bg-yellow-500 text-white rounded-lg p-3' : 'rounded-lg p-3'
+                        }>Blog</NavLink></li>
                     </ul>
 
                 </div>

@@ -11,13 +11,13 @@ const Quizes = () => {
     const quizesData = quizes.data;
     const { name, questions } = quizesData;
     useEffect(() => {
-        const rightData = localStorage.getItem('right-ans');
+        const rightData = JSON.parse(localStorage.getItem('right-ans'));
         if (rightData) {
             setRight(rightData)
         }
     }, [])
     useEffect(() => {
-        const wrongData = localStorage.getItem('wrong-ans');
+        const wrongData = JSON.parse(localStorage.getItem('wrong-ans'));
         if (wrongData) {
             setWrong(wrongData)
         }
