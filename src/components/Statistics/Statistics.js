@@ -6,7 +6,7 @@ const Statistics = () => {
     const data = useLoaderData()
     return (
 
-        <div>
+        <div className='mb-48'>
             <h1 className='font-bold text-3xl underline my-5'>Number Of Quizzes</h1>
             <ResponsiveContainer width={'70%'} height={300} className='mx-auto'>
                 <BarChart width={600} height={300} data={data.data}>

@@ -23,9 +23,11 @@ const Quiz = ({ quiz }) => {
                 <ToastContainer />
 
             </div>
-            {
-                options.map((option, idx) => <Options key={idx} option={option} correctAnswer={correctAnswer}></Options>)
-            }
+            <div className='grid md:grid-cols-2'>
+                {
+                    options.map((option, idx) => <Options key={idx} option={option} correctAnswer={correctAnswer}></Options>)
+                }
+            </div>
         </div>
     );
 };
