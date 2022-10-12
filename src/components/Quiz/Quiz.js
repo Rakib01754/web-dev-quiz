@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = ({ quiz, setWrong, setRight, wrong, right, number }) => {
-    const { correctAnswer, question, options } = quiz
+    const { correctAnswer, question, options, id } = quiz
     const notify = () => toast(`Answer: ${correctAnswer}`);
     return (
         <div className='border-2 w-[90%] mx-auto text-left mt-5 p-5 shadow-lg'>
@@ -31,6 +31,8 @@ const Quiz = ({ quiz, setWrong, setRight, wrong, right, number }) => {
                         number={idx + 1}
                         setRight={setRight}
                         setWrong={setWrong}
+                        id={id}
+
                     ></Options>)
                 }
             </div>
